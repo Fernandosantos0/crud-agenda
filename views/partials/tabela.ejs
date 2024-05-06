@@ -1,0 +1,36 @@
+<table id="tabela-contatos">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+            <th>Email</th>
+            <th colspan="2">Opcões</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        <!-- Inserindo os dados na tabela -->
+        <% contatos.forEach(contato =>{ %>
+            <tr>
+                <td><%= contato.id %></td>
+                <td><%= contato.nome %></td>
+                <td><%= contato.telefone %></td>
+                <td><%= contato.celular %></td>
+                <td><%= contato.email %></td>
+                <td class="center">
+                    <form action="/remove" method="POST">
+                        <input type="hidden" name="id" value="<%= contato.id %>">
+                        <button type="submit" class="color-remove">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+                <td class="center"><a href="/edit/<%= contato.id %>" class="color-edit"><i class="fa-solid fa-pencil"></i></a></td>
+            </tr>
+        <% }); %>
+
+    </tbody>
+</table>

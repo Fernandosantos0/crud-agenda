@@ -1,0 +1,37 @@
+<%- include('./partials/head') %>
+
+<section>
+    <div class="container">
+        <h2>Editar Contato:</h2>
+
+        <div class="container-form">
+            <form action="/edit" method="POST" accept-charset="utf-8">
+                <input type="hidden" name="id" value="<%= contato.id %>">
+
+                <div class="form-control">
+                    <label for="c-nome">Nome:</label>
+                    <input type="text" name="nome" id="c-nome" value="<%= contato.nome %>" placeholder="Digite o nome" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="c-telefone">Telefone:</label>
+                    <input type="tel" name="telefone" value="<%= contato.telefone %>" maxlength="9" id="c-telefone" placeholder="Digite o telefone" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="c-celular">Celular:</label>
+                    <input type="tel" name="celular" value="<%= contato.celular %>" maxlength="8" id="c-celular" placeholder="Digite o celular" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="c-email">E-mail:</label>
+                    <input type="email" name="email" value="<%= contato.email %>" id="c-email" placeholder="Digite o email" required>
+                </div>
+
+                <button type="submit" class="btn">Editar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include('./partials/footer') %>

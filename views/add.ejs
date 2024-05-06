@@ -1,0 +1,35 @@
+<%- include('./partials/head') %>
+
+<section>
+    <div class="container">
+        <h2>Cadastrar Contato:</h2>
+
+        <div class="container-form">
+            <form action="/add" method="POST" accept-charset="utf-8">
+                <div class="form-control">
+                    <label for="c-nome">Nome:</label>
+                    <input type="text" name="nome" id="c-nome" placeholder="Digite o nome" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="c-telefone">Telefone:</label>
+                    <input type="tel" name="telefone" maxlength="9" id="c-telefone" placeholder="Digite o telefone" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="c-celular">Celular:</label>
+                    <input type="tel" name="celular" maxlength="8" id="c-celular" placeholder="Digite o celular" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="c-email">E-mail:</label>
+                    <input type="email" name="email" id="c-email" placeholder="Digite o email" required>
+                </div>
+
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include('./partials/footer') %>

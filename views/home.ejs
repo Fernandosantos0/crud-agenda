@@ -1,0 +1,18 @@
+<%- include('./partials/head') %>
+
+<section>
+    <div class="container">
+        <h2>Contatos Cadastrados:</h2>
+
+        <% if(contatos.length !== 0) { %>
+            
+            <!-- Tabela dos contatos -->
+            <%- include('./partials/tabela') %>
+
+        <% } else { %>
+            <p class="msg-warning">Não foi cadastrado nenhum contato ainda!</p>
+        <% } %>
+    </div>
+</section>
+
+<%- include('./partials/footer') %>
